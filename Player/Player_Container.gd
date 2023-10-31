@@ -1,11 +1,12 @@
 extends Node2D
 
 @onready var Player = load("res://Player/Player.tscn")
-var starting_position = Vector2(200,200)
+var starting_position
 
 
 func _ready():
-	pass
+	var spawn = get_node("/root/Game/Spawn/Sprite2D")
+	starting_position = spawn.position
 
 
 func _physics_process(_delta):
